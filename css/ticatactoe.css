@@ -10,11 +10,24 @@
   src: url(/fonts/SuperMario256.ttf);
   font-family: xo_font;
 }
-body, html {
+body,
+html {
   width: 100%;
   height: 100%;
   display: flex;
-  background-color: #040A1F;
+  background-color: #040a1f;
+}
+
+.dialog-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 200px;
+  color: #fff;
+  font-family: xo_font;
+  font-size: 40px;
 }
 
 .left-container {
@@ -31,19 +44,22 @@ body, html {
   font-size: 100px;
   margin: 50px;
 }
-.left-container .reset, .left-container .restart {
-  width: 100px;
+.left-container .reset,
+.left-container .restart {
+  width: 120px;
   height: 50px;
   font-family: xo_font;
   font-size: 20px;
   color: 40A1F;
 }
-.left-container .reset:hover, .left-container .restart:hover {
+.left-container .reset:hover,
+.left-container .restart:hover {
   background-color: #3e3e3e;
   border: none;
   color: #ffffff;
 }
-.left-container .reset:active, .left-container .restart:active {
+.left-container .reset:active,
+.left-container .restart:active {
   scale: 0.95;
 }
 
@@ -78,4 +94,60 @@ body, html {
   color: #fff;
   border: 2px solid #ffffff;
   border-radius: 10px;
+}
+
+.clicked {
+  animation: clicked 0.5s;
+}
+
+.combination {
+  position: relative;
+  line-height: 200px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 3px;
+  animation: pulsate 0.5s infinite;
+  overflow: hidden;
+  z-index: 3;
+}
+
+@keyframes clicked {
+  0% {
+    opacity: 0;
+    font-size: 150px;
+  }
+  100% {
+    opacity: 1;
+    font-size: 75px;
+  }
+}
+@keyframes pulsate {
+  0% {
+    text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 18px #fff, 0 0 38px #26c229, 0 0 73px #26c229, 0 0 80px #26c229, 0 0 94px #26c229, 0 0 140px #26c229;
+  }
+  50% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #26c229, 0 0 90px #26c229, 0 0 100px #26c229, 0 0 110px #26c229, 0 0 160px #26c229;
+  }
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 18px #fff, 0 0 38px #26c229, 0 0 73px #26c229, 0 0 80px #26c229, 0 0 94px #26c229, 0 0 140px #26c229;
+  }
+}
+@keyframes borderAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=ticatactoe.css.map */
