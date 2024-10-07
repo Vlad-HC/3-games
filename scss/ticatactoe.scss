@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+@font-face{
+    src: url(/fonts/SuperMario256.ttf);
+    font-family: xo_font;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #040A1F;
+}
+.left-container{
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .score{
+        color: #fff;
+        font-family: xo_font;
+        font-size: 100px;
+        margin: 50px;
+    }
+    .reset,.restart{
+        width: 100px;
+        height: 50px;
+        font-family: xo_font;
+        font-size: 20px;
+        color: 040A1F;
+        &:hover{
+            background-color: #3e3e3e;
+            border:none;
+            color: #ffffff;
+        }
+        &:active{
+            scale: 0.95;
+        }
+    }
+}
+.game-container{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    table{
+        display: flex;
+        flex-direction: row;
+        width: 650px;
+        height: 650px;
+        tr{
+            width: 600px;
+            height: 200px;
+            display: flex;
+            margin: 10px 0;
+            td{
+                margin: 0 4px;
+                width: 200px;
+                height: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: xo_font;
+                font-size: 75px;
+                color: #fff;
+                border: 2px solid #ffffff;  
+                border-radius: 10px;
+                 
+            }
+        }
+    }
+}
